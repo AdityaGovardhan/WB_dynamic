@@ -66,7 +66,7 @@ class DesktopContainer extends Component {
               size="large"
             >
               <Container>
-                <Menu.Item as="a" active />
+                <Menu.Item as="a" />
                 <Menu.Item as="a" />
                 <Menu.Item as="a" />
                 <Menu.Item as="a" />
@@ -113,7 +113,7 @@ class MobileContainer extends Component {
       <Responsive maxWidth={Responsive.onlyMobile.maxWidth}>
         <Sidebar.Pushable>
           <Sidebar as={Menu} animation="uncover" inverted vertical visible={sidebarOpened}>
-            <Menu.Item as="a" active />
+            <Menu.Item as="a" />
             <Menu.Item as="a" />
             <Menu.Item as="a" />
             <Menu.Item as="a" />

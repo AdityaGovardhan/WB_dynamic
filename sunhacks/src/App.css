@@ -1,6 +1,13 @@
 .App {
   text-align: center;
 }
+path {
+  pointer-events: all;
+}
+path:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
