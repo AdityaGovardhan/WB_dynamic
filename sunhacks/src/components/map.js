@@ -4,9 +4,14 @@ import React, { Component } from 'react';
 import USAMap from 'react-usa-map';
 
 export default class Map extends Component {
-  state = {
-    returnedData: null
-  };
+  constructor(props) {
+    super(props);
+    this.state = { st: '' };
+    //   //this: is the instance of searchBar that has a func called handleChange.
+    //   //we are overriding the local func(this.handleChange) by binding this with it.
+    this.mapHandler = this.mapHandler.bind(this);
+    this.statesCustomConfig = this.statesCustomConfig.bind(this);
+  }
 
   /* mandatory */
   mapHandler(event) {
