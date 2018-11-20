@@ -6,14 +6,9 @@ import { fetchData } from '../actions';
 import { bindActionCreators } from 'redux';
 
 class Map extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = { st: '' };
-  //   //this: is the instance of searchBar that has a func called handleChange.
-  //   //we are overriding the local func(this.handleChange) by binding this with it.
-  //   this.mapHandler = this.mapHandler.bind(this);
-  //   this.statesCustomConfig = this.statesCustomConfig.bind(this);
-  // }
+  state = {
+    returnedData: null
+  };
   componentDidMount() {
     //this will automatically shows up in console
     this.props.fetchData();
@@ -21,9 +16,7 @@ class Map extends Component {
 
   /* mandatory */
   mapHandler(event) {
-    console.log('this is Event', event);
     // this.setState({ st: event.target.dataset.name });
-
     // alert(event.target.dataset.name);
   }
 
@@ -86,8 +79,7 @@ class Map extends Component {
   // }
 
   render() {
-    console.log(this.props.fetchData);
-    console.log(this.state);
+    console.log('PROPS:', this.props.data);
     return (
       <div className="App">
         <USAMap
@@ -103,8 +95,8 @@ class Map extends Component {
   }
 }
 
-function mapStateToProps(fetchData) {
-  return { fetchData };
+function mapStateToProps({ data }) {
+  return { data };
 }
 
 export default connect(

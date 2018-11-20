@@ -8,13 +8,11 @@ const ROOT_URL = 'http://api.worldbank.org/v2/countries/all/indicators/SP.POP.TO
 export function fetchData() {
   // const request = axios.get(`${ROOT_URL}?key=${API_KEY}`);
   // const url = ROOT_URL;
-  // console.log('URL from index.js', url);
-  const request = axios.get('https://code.org/schools.json').then(result => console.log(result));
-  console.log('Request from index.js', request);
-  return {
-    type: FETCH_DATA,
-    payload: request
-  };
+  const payload = axios.get(
+    'https://api.datausa.io/api/join?required=income,adult_obesity&show=geo'
+  );
+
+  return { type: FETCH_DATA, payload };
 }
 
 // redux-thunk for handling async actions
