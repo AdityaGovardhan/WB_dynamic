@@ -16,6 +16,7 @@ import {
   Visibility
 } from 'semantic-ui-react';
 import Map from './map';
+import Chart from './chart';
 
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
@@ -174,7 +175,9 @@ const HomepageLayout = () => (
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign="middle">
         <Grid.Row>
-          <Grid.Column width={8} />
+          <Grid.Column width={8}>
+            <Chart />
+          </Grid.Column>
           <Grid.Column floated="right" width={6} />
         </Grid.Row>
       </Grid>

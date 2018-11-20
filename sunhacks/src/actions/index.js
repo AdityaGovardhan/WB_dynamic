@@ -11,7 +11,6 @@ export function fetchData() {
   const payload = axios.get(
     'https://api.datausa.io/api/join?required=income,adult_obesity&show=geo'
   );
-
   return { type: FETCH_DATA, payload };
 }
 
