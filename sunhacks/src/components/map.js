@@ -19,6 +19,18 @@ class Map extends Component {
     this.props.fetchData(this.state.st);
     // this.setState({ st: '' });
     console.log(event.target.dataset.name);
+
+    // var st = this.props.state.st;
+    // switch (st) {
+    //   case 'AZ':
+    //     console.log('04000US04');
+    //     break;
+    //   case 'AK':
+    //     console.log('04000US02');
+    //     break;
+    //   default:
+    //     console.log('No value');
+    // }
   }
 
   render() {
