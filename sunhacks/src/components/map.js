@@ -17,6 +17,7 @@ class Map extends Component {
   mapHandler(event) {
     this.setState({ st: event.target.dataset.name });
     this.props.fetchData(this.state.st);
+    // this.setState({ st: '' });
     console.log(event.target.dataset.name);
   }
 

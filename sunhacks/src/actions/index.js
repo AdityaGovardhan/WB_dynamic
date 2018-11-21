@@ -5,11 +5,12 @@ const ROOT_URL = 'http://api.worldbank.org/v2/countries/all/indicators/SP.POP.TO
 // const ROOT_URL = 'https://www.googleapis.com/analytics/v3/data/ga';
 // const API_KEY = 'AIzaSyCbYI_0eAQwblsi3wdGksEyLtzRrgvoUMw';
 
-export function fetchData() {
+export function fetchData(st) {
+  console.log('From Action:', st);
   // const request = axios.get(`${ROOT_URL}?key=${API_KEY}`);
-  // const url = ROOT_URL;
+  // const url = `${ROOT_URL}&q=${st},us`;
   const payload = axios.get(
-    'https://api.datausa.io/api/join?required=income,adult_obesity&show=geo'
+    'https://api.datausa.io/api/?show=geo&sumlevel=state&required=avg_wage'
   );
   return { type: FETCH_DATA, payload };
 }
@@ -24,3 +25,6 @@ export function fetchData() {
 //     });
 //   };
 // }
+// const payload = axios.get(
+//   'https://api.datausa.io/api/join?required=income,adult_obesity&show=geo'
+// );
