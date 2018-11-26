@@ -1,5 +1,4 @@
-export default function() {
-  var st = '{this.state.st}';
+export function renderCode(st) {
   switch (st) {
     case 'AZ':
       console.log('04000US04');
@@ -7,6 +6,158 @@ export default function() {
     case 'AK':
       console.log('04000US02');
       break;
+
+    case 'AL':
+      console.log('04000US01');
+      break;
+    case 'AR':
+      console.log('04000US05');
+      break;
+    case 'CA':
+      console.log('04000US06');
+      break;
+    case 'CO':
+      console.log('04000US08');
+      break;
+    case 'CN':
+      console.log('04000US09');
+      break;
+    case 'DL':
+      console.log('04000US10');
+      break;
+    case 'DC':
+      console.log('04000US11');
+      break;
+    case 'FL':
+      console.log('04000US12');
+      break;
+    case 'GA':
+      console.log('04000US13');
+      break;
+    case 'HW':
+      console.log('04000US15');
+      break;
+    case 'ID':
+      console.log('04000US16');
+      break;
+    case 'IL':
+      console.log('04000US17');
+      break;
+    case 'IN':
+      console.log('04000US18');
+      break;
+    case 'IA':
+      console.log('04000US19');
+      break;
+    case 'KS':
+      console.log('04000US20');
+      break;
+    case 'KN':
+      console.log('04000US21');
+      break;
+    case 'LA':
+      console.log('04000US22');
+      break;
+    case 'ME':
+      console.log('04000US23');
+      break;
+    case 'MD':
+      console.log('04000US24');
+      break;
+    case 'MA':
+      console.log('04000US25');
+      break;
+    case 'MI':
+      console.log('04000US26');
+      break;
+    case 'MN':
+      console.log('04000US27');
+      break;
+    case 'MS':
+      console.log('04000US28');
+      break;
+    case 'MO':
+      console.log('04000US29');
+      break;
+    case 'MT':
+      console.log('04000US30');
+      break;
+    case 'NE':
+      console.log('04000US31');
+      break;
+    case 'NV':
+      console.log('04000US32');
+      break;
+    case 'NH':
+      console.log('04000US33');
+      break;
+    case 'NJ':
+      console.log('04000US34');
+      break;
+    case 'NM':
+      console.log('04000US35');
+      break;
+    case 'NY':
+      console.log('04000US36');
+      break;
+    case 'NC':
+      console.log('04000US37');
+      break;
+    case 'ND':
+      console.log('04000US38');
+      break;
+    case 'OH':
+      console.log('04000US39');
+      break;
+    case 'OK':
+      console.log('04000US40');
+      break;
+    case 'OR':
+      console.log('04000US41');
+      break;
+    case 'PA':
+      console.log('04000US42');
+      break;
+    case 'IR':
+      console.log('04000US44');
+      break;
+    case 'SC':
+      console.log('04000US45');
+      break;
+    case 'SD':
+      console.log('04000US46');
+      break;
+    case 'TN':
+      console.log('04000US47');
+      break;
+    case 'TX':
+      console.log('04000US48');
+      break;
+    case 'UT':
+      console.log('04000US49');
+      break;
+    case 'VT':
+      console.log('04000US50');
+      break;
+    case 'VA':
+      console.log('04000US51');
+      break;
+    case 'WA':
+      console.log('04000US53');
+      break;
+    case 'WV':
+      console.log('04000US54');
+      break;
+    case 'WI':
+      console.log('04000US55');
+      break;
+    case 'WY':
+      console.log('04000US56');
+      break;
+    case 'PR':
+      console.log('04000US72');
+      break;
+
     default:
       console.log('No value');
   }

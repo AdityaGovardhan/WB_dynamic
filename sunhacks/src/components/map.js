@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { fetchData } from '../actions';
 import USAMap from 'react-usa-map';
 import { bindActionCreators } from '../../../../../../AppData/Local/Microsoft/TypeScript/3.1/node_modules/redux';
-
+import { renderCode } from '../States';
 class Map extends Component {
   constructor(props) {
     super(props);
@@ -13,38 +13,17 @@ class Map extends Component {
     this.mapHandler = this.mapHandler.bind(this);
   }
 
-  // renderState(st) {
-  //   switch (st) {
-  //     case 'AZ':
-  //       console.log('04000US04');
-  //       break;
-  //     case 'AK':
-  //       console.log('04000US02');
-  //       break;
-  //     // default:
-  //     //   console.log('No value');
-  //   }
-  // }
-
   /* mandatory */
   mapHandler(event) {
     const st = event.target.dataset.name;
     this.setState({ st });
+
     //react will wait till the end of the func to batch update all calls to setState
     this.props.fetchData(st);
     console.log(st);
 
     //think of a way to get the state
-    switch (st) {
-      case 'AZ':
-        console.log('04000US04');
-        break;
-      case 'AK':
-        console.log('04000US02');
-        break;
-      // default:
-      //   console.log('No value');
-    }
+    renderCode(st);
   }
 
   render() {
