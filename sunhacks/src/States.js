@@ -19,10 +19,10 @@ export function renderCode(st) {
     case 'CO':
       console.log('04000US08');
       break;
-    case 'CN':
+    case 'CT':
       console.log('04000US09');
       break;
-    case 'DL':
+    case 'DE':
       console.log('04000US10');
       break;
     case 'DC':
@@ -34,7 +34,7 @@ export function renderCode(st) {
     case 'GA':
       console.log('04000US13');
       break;
-    case 'HW':
+    case 'HI':
       console.log('04000US15');
       break;
     case 'ID':
@@ -52,7 +52,7 @@ export function renderCode(st) {
     case 'KS':
       console.log('04000US20');
       break;
-    case 'KN':
+    case 'KY':
       console.log('04000US21');
       break;
     case 'LA':
@@ -118,7 +118,7 @@ export function renderCode(st) {
     case 'PA':
       console.log('04000US42');
       break;
-    case 'IR':
+    case 'RI':
       console.log('04000US44');
       break;
     case 'SC':
@@ -170,7 +170,7 @@ export function renderCode(st) {
 // 04000US06	California                  CA
 // 04000US08	Colorado                    CO
 // 04000US09	Connecticut                 CN
-// 04000US10	Delaware                    DL
+// 04000US10	Delaware                    DE
 // 04000US11	District Of Columbia        DC
 // 04000US12	Florida                     FL
 // 04000US13	Georgia                     GA
@@ -180,7 +180,7 @@ export function renderCode(st) {
 // 04000US18	Indiana                     IN
 // 04000US19	Iowa                        IA
 // 04000US20	Kansas                      KS
-// 04000US21	Kentucky                    KN
+// 04000US21	Kentucky                    KY
 // 04000US22	Louisiana                   LA
 // 04000US23	Maine                       ME
 // 04000US24	Maryland                    MD
