@@ -10,7 +10,7 @@ export function fetchData(st) {
   // const request = axios.get(`${ROOT_URL}?key=${API_KEY}`);
   // const url = `${ROOT_URL}&q=${st},us`;
   const payload = axios.get(
-    'https://api.datausa.io/api/?show=geo&sumlevel=state&required=avg_wage'
+    `https://api.datausa.io/api/?show=geo&sumlevel=state&required=avg_wage`
   );
   return { type: FETCH_DATA, payload };
 }

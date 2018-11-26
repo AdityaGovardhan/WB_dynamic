@@ -4,11 +4,6 @@ import { fetchData } from '../actions';
 import { Header } from 'semantic-ui-react';
 
 class chart extends Component {
-  componentDidMount() {
-    // this will automatically shows up in console
-    this.props.fetchData();
-  }
-
   render() {
     console.log('PROPS:', this.props.data);
 
@@ -31,6 +26,6 @@ function mapStateToProps({ data }) {
 }
 
 export default connect(
-  mapStateToProps,
-  { fetchData }
+  mapStateToProps
+  //   { fetchData }
 )(chart);

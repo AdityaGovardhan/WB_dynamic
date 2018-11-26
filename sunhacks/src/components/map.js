@@ -13,31 +13,45 @@ class Map extends Component {
     this.mapHandler = this.mapHandler.bind(this);
   }
 
+  // renderState(st) {
+  //   switch (st) {
+  //     case 'AZ':
+  //       console.log('04000US04');
+  //       break;
+  //     case 'AK':
+  //       console.log('04000US02');
+  //       break;
+  //     // default:
+  //     //   console.log('No value');
+  //   }
+  // }
+
   /* mandatory */
   mapHandler(event) {
-    this.setState({ st: event.target.dataset.name });
-    this.props.fetchData(this.state.st);
-    // this.setState({ st: '' });
-    console.log(event.target.dataset.name);
+    const st = event.target.dataset.name;
+    this.setState({ st });
+    //react will wait till the end of the func to batch update all calls to setState
+    this.props.fetchData(st);
+    console.log(st);
 
-    // var st = this.props.state.st;
-    // switch (st) {
-    //   case 'AZ':
-    //     console.log('04000US04');
-    //     break;
-    //   case 'AK':
-    //     console.log('04000US02');
-    //     break;
-    //   default:
-    //     console.log('No value');
-    // }
+    //think of a way to get the state
+    switch (st) {
+      case 'AZ':
+        console.log('04000US04');
+        break;
+      case 'AK':
+        console.log('04000US02');
+        break;
+      // default:
+      //   console.log('No value');
+    }
   }
 
   render() {
     return (
       <div className="App">
         <USAMap value={this.state.st} onClick={this.mapHandler} />
-        <div>Map</div>
+        <div>Map data</div>
       </div>
     );
   }
@@ -48,6 +62,6 @@ function mapStateToProps(dispatch) {
 }
 
 export default connect(
-  null,
-  mapStateToProps
+  mapStateToProps,
+  { fetchData }
 )(Map);

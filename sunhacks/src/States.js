@@ -1,13 +1,15 @@
-var st = '{this.state.st}';
-switch (st) {
-  case 'AZ':
-    console.log('04000US04');
-    break;
-  case 'AK':
-    console.log('04000US02');
-    break;
-  default:
-    console.log('No value');
+export default function() {
+  var st = '{this.state.st}';
+  switch (st) {
+    case 'AZ':
+      console.log('04000US04');
+      break;
+    case 'AK':
+      console.log('04000US02');
+      break;
+    default:
+      console.log('No value');
+  }
 }
 
 // 04000US01	Alabama                     AL
