@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchData } from '../actions';
 import { Header } from 'semantic-ui-react';
+import { Sparklines, SparklinesLine, SparklinesReferenceLine } from 'react-sparklines';
 
 class chart extends Component {
   render() {
+    const avg_wage = this.props.data.map(avg_wage => avg_wage[2]);
+    console.log(avg_wage);
     console.log('PROPS:', this.props.data);
 
     return (
@@ -13,9 +16,9 @@ class chart extends Component {
         {this.props.data.map((item, index) => (
           <li key={index}>{item[2]}</li>
         ))}
-        {/* <Header as="h4" inverted>
-          {average(this.props.data)} {this.props.units}
-        </Header> */}
+        <Sparklines data={avg_wage}>
+          <SparklinesLine />
+        </Sparklines>
       </div>
     );
   }

@@ -10,7 +10,7 @@ export function fetchData(code) {
   // const request = axios.get(`${ROOT_URL}?key=${API_KEY}`);
   // const url = `${ROOT_URL}&q=${st},us`;
   const payload = axios.get(
-    `https://api.datausa.io/api/?show=geo&required=diabetes&sumlevel=all&geo=${code}`
+    `https://api.datausa.io/api/?show=geo&required=avg_wage&sumlevel=all&geo=${code}`
   );
   return { type: FETCH_DATA, payload };
 }
