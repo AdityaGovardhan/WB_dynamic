@@ -17,13 +17,13 @@ class Map extends Component {
   mapHandler(event) {
     const st = event.target.dataset.name;
     this.setState({ st });
-
+    const code = renderCode(st);
     //react will wait till the end of the func to batch update all calls to setState
-    this.props.fetchData(st);
+    this.props.fetchData(code);
     console.log(st);
 
     //think of a way to get the state
-    renderCode(st);
+    // renderCode(st);
   }
 
   render() {
